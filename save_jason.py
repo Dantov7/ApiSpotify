@@ -2,9 +2,12 @@ import json
 
 
 def save(*items):
-    data={}
+
+    data=[]
+
+    for i in items:
+        data.append(i)
+
     with open ("Json.json","w") as file:
-        
-        for key in items:
-            json.dump(data[key], file)
+        json.dump(data, file, indent=3)
     

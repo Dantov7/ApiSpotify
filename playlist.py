@@ -16,7 +16,7 @@ class Playlist:
 
         self.__followers= self.__response_playlist.json()["followers"]["total"]
 
-        self.information = {"Playlist":{"Total_followers":self.__followers,"Features_tracks":self.get_features()}}
+        self.information = {"Playlist_information":{"Total_followers":self.__followers,"Features_tracks":self.get_features()}}
 
         self.__save_image()
 

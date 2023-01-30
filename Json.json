@@ -1,0 +1,82 @@
+[
+   {
+      "User_preference": {
+         "Top_10_artistas": [
+            "Chl\u00f6e",
+            "Chris Brown",
+            "Gojira",
+            "Bad Bunny",
+            "Maluma",
+            "Summer Walker",
+            "FLO",
+            "Rels B",
+            "Beyonc\u00e9",
+            "Mar\u00eda Isabel"
+         ],
+         "Top_5_genres": [
+            "r&b",
+            "pop",
+            "dance pop",
+            "urbano latino",
+            "rap"
+         ],
+         "Top_10_tracks": [
+            [
+               "Under The Influence",
+               "Chris Brown"
+            ],
+            [
+               "Lonly",
+               "El Dukesito"
+            ],
+            [
+               "Flying Whales",
+               "Gojira"
+            ],
+            [
+               "Love",
+               "Keyshia Cole"
+            ],
+            [
+               "Nost\u00e1lgico",
+               "Rvssian"
+            ],
+            [
+               "Tonika (feat. Ziggy Marley)",
+               "Maluma"
+            ],
+            [
+               "Cardboard Box",
+               "FLO"
+            ],
+            [
+               "Amazonia",
+               "Gojira"
+            ],
+            [
+               "Feels Like",
+               "Lucky Daye"
+            ],
+            [
+               "Dumpling - Remix",
+               "Stylo G"
+            ]
+         ]
+      }
+   },
+   {
+      "Playlist_information": {
+         "Total_followers": 3231153,
+         "Features_tracks": {
+            "tempo": 123.94041428571425,
+            "acousticness": 0.4077185714285714,
+            "danceability": 0.5609714285714283,
+            "energy": 0.5196714285714288,
+            "instrumentalness": 0.04759756957142857,
+            "liveness": 0.17244,
+            "loudness": -10.064871428571431,
+            "valence": 0.6001142857142857
+         }
+      }
+   }
+]
