@@ -66,16 +66,16 @@
    },
    {
       "Playlist_information": {
-         "Total_followers": 3231153,
+         "Total_followers": 3231161,
          "Features_tracks": {
-            "tempo": 123.94041428571425,
-            "acousticness": 0.4077185714285714,
-            "danceability": 0.5609714285714283,
-            "energy": 0.5196714285714288,
-            "instrumentalness": 0.04759756957142857,
-            "liveness": 0.17244,
-            "loudness": -10.064871428571431,
-            "valence": 0.6001142857142857
+            "tempo": 123.94,
+            "acousticness": 0.41,
+            "danceability": 0.56,
+            "energy": 0.52,
+            "instrumentalness": 0.05,
+            "liveness": 0.17,
+            "loudness": -10.06,
+            "valence": 0.6
          }
       }
    }

@@ -1,7 +1,7 @@
 import json
 
 
-def save(*items):
+def save_in_json(*items):
 
     data=[]
 

@@ -2,7 +2,7 @@
 from auth import Auth
 from ranking import Ranking
 from playlist import Playlist
-from save_jason import save
+from save import save_in_json
 
 
 auth = Auth()
@@ -22,6 +22,6 @@ ranking = Ranking(base_url, headers)
 playlist = Playlist(base_url, headers,id_playlist)
 
 
-save(ranking.user_preference, playlist.information)
+save_in_json(ranking.user_preference, playlist.information)
 
 

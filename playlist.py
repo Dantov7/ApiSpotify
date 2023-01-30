@@ -90,8 +90,8 @@ class Playlist:
         suma=0
         for i in list:
             suma += i 
-        avergae= suma/len(list)
-        return avergae
+        average= suma/len(list)
+        return round(average,2)
     
     def __save_image (self):
 
