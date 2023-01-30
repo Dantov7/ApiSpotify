@@ -2,6 +2,7 @@
 from auth import Auth
 from ranking import Ranking
 from playlist import Playlist
+from save_jason import save
 
 
 auth = Auth()
@@ -16,13 +17,10 @@ headers = {
 }
 
 id_playlist= "37i9dQZF1DWWGFQLoP9qlv"
+
 ranking = Ranking(base_url, headers)
 playlist = Playlist(base_url, headers,id_playlist)
 
-ranking.save_file()
-playlist.save_file()
-playlist.save_image()
-
-
+save(ranking.user_preference, playlist.information)
 
 

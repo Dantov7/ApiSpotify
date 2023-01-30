@@ -1,6 +1,4 @@
 import requests
-import heapq
-import json
 
 class Playlist:
     def __init__(self,base_url,headers,id_playlist):
@@ -18,6 +16,10 @@ class Playlist:
 
         self.__followers= self.__response_playlist.json()["followers"]["total"]
 
+        self.information = {"Playlist":{"Total_followers":self.__followers,"Features_tracks":self.get_features()}}
+
+        self.__save_image()
+
     def __get_ids(self):
         
         list_id_tracks=[]
@@ -29,7 +31,7 @@ class Playlist:
 
         return strings_id
 
-    def __features (self):
+    def get_features (self):
         
         features = ["tempo","acousticness","danceability","energy","instrumentalness","liveness","loudness","valence"]
         list_tempo = []
@@ -71,38 +73,30 @@ class Playlist:
 
         features_tracks = {
 
-            "tempo": self.__get_median(list_tempo),
-            "acousticness": self.__get_median(list_acousticness),
-            "danceability": self.__get_median(list_danceability),
-            "energy": self.__get_median(list_energy),
-            "instrumentalness": self.__get_median(list_instrumentalness),
-            "liveness": self.__get_median(list_liveness),
-            "loudness": self.__get_median(list_loudness),
-            "valence": self.__get_median(list_valence)
+            "tempo": self.__get_average(list_tempo),
+            "acousticness": self.__get_average(list_acousticness),
+            "danceability": self.__get_average(list_danceability),
+            "energy": self.__get_average(list_energy),
+            "instrumentalness": self.__get_average(list_instrumentalness),
+            "liveness": self.__get_average(list_liveness),
+            "loudness": self.__get_average(list_loudness),
+            "valence": self.__get_average(list_valence)
         }
 
         return features_tracks
     
-    def __get_median(self,list):
+    def __get_average(self,list):
         
-        heapq.heapify(list)
-
-        for _ in range(len(list)//2 + 1):
-            median = heapq.heappop(list)
-
-        return median
+        suma=0
+        for i in list:
+            suma += i 
+        avergae= suma/len(list)
+        return avergae
     
-    def save_image (self):
+    def __save_image (self):
 
         response_image=requests.get(self.__response_playlist.json()['images'][0]['url'])
 
         with open ("image.jpg","wb") as file:
             file.write(response_image.content)
         
-
-    def save_file(self):
-
-        feature=self.__features()
-
-        with open ("playlist.json","w") as file:
-            json.dump({"Total_followers":self.__followers,"Tracks_features":feature}, file)
